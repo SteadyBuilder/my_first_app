@@ -7,6 +7,8 @@ import 'package:my_first_app/my_project/quote_app.dart';
 import 'package:my_first_app/my_project/random_color_app.dart';
 import 'package:my_first_app/my_project/splash.dart';
 import 'package:my_first_app/my_project/memo.dart';
+import 'package:my_first_app/my_project/tabs.dart';
+import 'package:my_first_app/my_project/img_view.dart';
 
 void main() {
   runApp(MultiFeatureApp());
@@ -34,6 +36,8 @@ class HomeScreen extends StatelessWidget {
     {'name': '랜덤 배경 색상 변경 앱', 'widget': AnimatedColorScreen()},
     {'name': '로딩 화면', 'widget': SplashScreen()},
     {'name': '메모 앱', 'widget': MemoScreen()},
+    {'name': '탭바 앱', 'widget': TabsScreen()},
+    {'name': '이미지뷰어 앱', 'widget': ImageViewerScreen()},
     // 계속 추가...
   ];
 
