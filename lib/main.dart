@@ -5,6 +5,7 @@ import 'package:my_first_app/my_project/todo.dart';
 import 'package:my_first_app/my_project/calculator.dart';
 import 'package:my_first_app/my_project/quote_app.dart';
 import 'package:my_first_app/my_project/random_color_app.dart';
+import 'package:my_first_app/my_project/splash.dart';
 
 void main() {
   runApp(MultiFeatureApp());
@@ -30,6 +31,7 @@ class HomeScreen extends StatelessWidget {
     {'name': 'Calculator', 'widget': CalculatorScreen()},
     {'name': 'Quote App', 'widget': const QuoteScreen()},
     {'name': 'RandomColorApp', 'widget': AnimatedColorScreen()},
+    {'name': 'SplashApp', 'widget': SplashScreen()},
     // 계속 추가...
   ];
 
