@@ -10,6 +10,7 @@ import 'package:my_first_app/my_project/memo.dart';
 import 'package:my_first_app/my_project/tabs.dart';
 import 'package:my_first_app/my_project/img_view.dart';
 import 'package:my_first_app/my_project/weather.dart';
+import 'package:my_first_app/my_project/QRGenerator.dart';
 
 void main() {
   runApp(MultiFeatureApp());
@@ -40,6 +41,7 @@ class HomeScreen extends StatelessWidget {
     {'name': '탭바 앱', 'widget': TabsScreen()},
     {'name': '이미지뷰어 앱', 'widget': ImageViewerScreen()},
     {'name': '날씨 앱', 'widget': WeatherScreen()},
+    {'name': 'QR 코드 생성기', 'widget': QRGeneratorScreen()},
     // 계속 추가...
   ];
 
