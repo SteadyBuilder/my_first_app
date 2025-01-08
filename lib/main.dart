@@ -11,6 +11,7 @@ import 'package:my_first_app/my_project/tabs.dart';
 import 'package:my_first_app/my_project/img_view.dart';
 import 'package:my_first_app/my_project/weather.dart';
 import 'package:my_first_app/my_project/QRGenerator.dart';
+import 'package:my_first_app/my_project/QRScanner.dart';
 
 void main() {
   runApp(MultiFeatureApp());
@@ -42,19 +43,20 @@ class HomeScreen extends StatelessWidget {
     {'name': '이미지뷰어 앱', 'widget': ImageViewerScreen()},
     {'name': '날씨 앱', 'widget': WeatherScreen()},
     {'name': 'QR 코드 생성기', 'widget': QRGeneratorScreen()},
+    {'name': 'QR 코드 스캐너', 'widget': QRScannerScreen()},
     // 계속 추가...
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('100 Mini Projects')),
+      appBar: AppBar(title: const Text('100 Mini Projects')),
       body: ListView.builder(
         itemCount: projects.length,
         itemBuilder: (context, index) {
           return ListTile(
             title: Text(projects[index]['name']),
-            trailing: Icon(Icons.arrow_forward),
+            trailing: const Icon(Icons.arrow_forward),
             onTap: () {
               Navigator.push(
                 context,

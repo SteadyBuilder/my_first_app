@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
-void main() => runApp(QRGeneratorApp());
-
 class QRGeneratorApp extends StatelessWidget {
+  const QRGeneratorApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,7 +25,9 @@ class _QRGeneratorScreenState extends State<QRGeneratorScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("QR 코드 생성기")),
+      appBar: AppBar(
+        title: const Text("QR 코드 생성기"),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -34,7 +36,7 @@ class _QRGeneratorScreenState extends State<QRGeneratorScreen> {
             TextField(
               controller: _controller,
               decoration: const InputDecoration(
-                labelText: "텍스트를 입력하세요",
+                labelText: "QR 코드 데이터를 입력하세요",
                 border: OutlineInputBorder(),
               ),
             ),
@@ -53,8 +55,7 @@ class _QRGeneratorScreenState extends State<QRGeneratorScreen> {
                 child: QrImageView(
                   data: _qrData,
                   version: QrVersions.auto,
-                  size: 320.0,
-                  gapless: false,
+                  size: 200.0,
                 ),
               ),
           ],
