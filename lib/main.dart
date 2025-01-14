@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_app/my_project/column.dart';
+import 'package:my_first_app/my_project/column_row.dart';
 import 'package:my_first_app/my_project/hello.dart';
 import 'package:my_first_app/my_project/counter.dart';
+import 'package:my_first_app/my_project/row.dart';
 import 'package:my_first_app/my_project/todo.dart';
 import 'package:my_first_app/my_project/calculator.dart';
 import 'package:my_first_app/my_project/quote_app.dart';
@@ -12,18 +15,21 @@ import 'package:my_first_app/my_project/img_view.dart';
 import 'package:my_first_app/my_project/weather.dart';
 import 'package:my_first_app/my_project/QRGenerator.dart';
 import 'package:my_first_app/my_project/QRScanner.dart';
+import 'package:my_first_app/my_project/timer.dart';
 
 void main() {
   runApp(MultiFeatureApp());
 }
 
 class MultiFeatureApp extends StatelessWidget {
+  const MultiFeatureApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: '100 Mini Projects',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(primarySwatch: Colors.amber),
       home: HomeScreen(),
     );
   }
@@ -31,7 +37,10 @@ class MultiFeatureApp extends StatelessWidget {
 
 class HomeScreen extends StatelessWidget {
   final List<Map<String, dynamic>> projects = [
-    {'name': 'Hello', 'widget': const HelloPage()},
+    {'name': 'Hello', 'widget': HelloPage()},
+    {'name': 'Column', 'widget': ColumnPage()},
+    {'name': 'Row', 'widget': RowPage()},
+    {'name': 'ColumnRow', 'widget': ColumnRowPage()},
     {'name': '카운터 앱', 'widget': const CounterScreen()},
     {'name': '할일 목록 앱', 'widget': const TodoScreen()},
     {'name': '계산기 앱', 'widget': CalculatorScreen()},
@@ -43,9 +52,12 @@ class HomeScreen extends StatelessWidget {
     {'name': '이미지뷰어 앱', 'widget': ImageViewerScreen()},
     {'name': '날씨 앱', 'widget': WeatherScreen()},
     {'name': 'QR 코드 생성기', 'widget': QRGeneratorScreen()},
-    {'name': 'QR 코드 스캐너', 'widget': QRScannerScreen()},
+    {'name': 'QR 코드 스캐너', 'widget': const QRScannerScreen()},
+    {'name': '타이머', 'widget': TimerScreen()},
     // 계속 추가...
   ];
+
+  HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
