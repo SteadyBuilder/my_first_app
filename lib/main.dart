@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_app/my_project/button.dart';
 import 'package:my_first_app/my_project/column.dart';
 import 'package:my_first_app/my_project/column_row.dart';
 import 'package:my_first_app/my_project/hello.dart';
@@ -12,6 +13,7 @@ import 'package:my_first_app/my_project/splash.dart';
 import 'package:my_first_app/my_project/memo.dart';
 import 'package:my_first_app/my_project/tabs.dart';
 import 'package:my_first_app/my_project/img_view.dart';
+import 'package:my_first_app/my_project/updateButton.dart';
 import 'package:my_first_app/my_project/weather.dart';
 import 'package:my_first_app/my_project/QRGenerator.dart';
 import 'package:my_first_app/my_project/QRScanner.dart';
@@ -41,6 +43,8 @@ class HomeScreen extends StatelessWidget {
     {'name': 'Column', 'widget': ColumnPage()},
     {'name': 'Row', 'widget': RowPage()},
     {'name': 'ColumnRow', 'widget': ColumnRowPage()},
+    {'name': 'Button', 'widget': ButtonExampleApp()},
+    {'name': 'Update_Button', 'widget': UpdateScreenApp()},
     {'name': '카운터 앱', 'widget': const CounterScreen()},
     {'name': '할일 목록 앱', 'widget': const TodoScreen()},
     {'name': '계산기 앱', 'widget': CalculatorScreen()},
